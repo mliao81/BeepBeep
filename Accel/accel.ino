@@ -77,10 +77,11 @@ void loop()
     gx = (GyX + 270) / 131.07;
     gy = (GyY - 351) / 131.07;
     gz = (GyZ + 136) / 131.07;
-    // calculating Amplitute vactor for 3 axis
+    // calculating Amplitute vector for 3 axis
     float Raw_Amp = pow(pow(ax, 2) + pow(ay, 2) + pow(az, 2), 0.5);
     int Amp = Raw_Amp * 10;
     Serial.println(Amp);
+    
     // buzzer turns on if there is a fall
     if (fall == 1)
     {
